@@ -1,0 +1,142 @@
+<!-- <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col md="8">
+        <c-card-group>
+          <c-card class="p-4">
+            <c-card-body>
+              <form cForm>
+                <h1>Login</h1>
+                <p class="text-medium-emphasis">Sign In to your account</p>
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input autoComplete="username" cFormControl placeholder="Username" />
+                </c-input-group>
+                <c-input-group class="mb-4">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilLockLocked"></svg>
+                  </span>
+                  <input
+                    autoComplete="current-password"
+                    cFormControl
+                    placeholder="Password"
+                    type="password"
+                  />
+                </c-input-group>
+                <c-row>
+                  <c-col xs="6">
+                    <button cButton class="px-4" color="primary">
+                      Login
+                    </button>
+
+                  </c-col>
+                  <c-col class="text-right" xs="6">
+                    <button cButton class="px-0" color="link">
+                      Forgot password?
+                    </button>
+                  </c-col>
+                </c-row>
+              </form>
+            </c-card-body>
+          </c-card>
+          <c-card [ngStyle]="{'width.%': 44}" class="text-white bg-primary py-5">
+            <c-card-body class="text-center">
+              <div>
+                <h2>Sign up</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button [active]="true" cButton class="mt-3" color="primary" routerLink="/register">
+                  Register Now!
+                </button>
+              </div>
+            </c-card-body>
+          </c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row mt-5">
+      <div class="col"></div>
+      <div class="col-4">
+          <div class="card shadow">
+              <div class="card-body">
+                  <form>
+                      <div class="mb-3">
+                          <h4 class="text-dark text-muted">Login</h4>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password">
+                      </div>
+                      <button type="button" class="btn btn-info">Login</button>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <a routerLink="/register" style="text-decoration: none;">Need Account ? <span class="text-danger">Register</span></a>
+                          </div>
+                          <!-- <c-col class="text-right" xs="6"> -->
+                            <button cButton class="px-0" color="link">
+                              Forgot password?
+                            </button>
+                          <!-- </c-col> -->
+                          <!-- <div class="col-md-6">
+                              <a href="/forgot-password" class="text-dark" style="text-decoration: none;"> Forgot Password ? </a>
+                          </div> -->
+                      </div>
+                      <!-- <div class="row mt-2">
+                          <a style="text-decoration: none;cursor: pointer;">
+                              <div class="card shadow text-center">
+                                  <div class="card-body">
+                                    <asl-google-signin-button> </asl-google-signin-button>
+                                     Sign In with Google
+                                  </div>
+                              </div>
+                          </a>
+                      </div> -->
+                      <div class="col s12 m6 offset-m3 center-align">
+                        <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/" style="text-transform:none">
+                            <div class="left">
+                                <!-- <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" /> -->
+                                      <div *ngIf="isLoggedIn()">
+                                      <div class="container">Hi and welcome!</div>
+                                      <div class="container">Name: {{ userInfo?.info?.name }}</div>
+                                      <div class="container"><img src="{{ userInfo?.info?.picture }}"></div>
+                                      <div class="container">
+                                        <button (click)="getEmails()">List Emails</button>
+                                      </div>
+                                      <div class="container" *ngFor="let snippet of mailSnippets">
+                                        {{ snippet }}
+                                      </div>
+                                      <div class="container">
+                                        <button (click)="logout()">Logout from Google</button>
+                                      </div>
+                                    </div> 
+                                    <h1>login</h1>
+                            </div>
+                            Login with Google
+                        </a>
+                    </div>
+                    
+                    <!-- Compiled and minified CSS -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+                    
+                    <!-- Compiled and minified JavaScript -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="col"></div>
+  </div>
+</div>
