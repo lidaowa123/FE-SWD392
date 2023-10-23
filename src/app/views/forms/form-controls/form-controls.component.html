@@ -1,25 +1,14 @@
-<c-row ngPreserveWhitespaces>
+<!-- <c-row ngPreserveWhitespaces>
   <c-col xs="12">
-    <!-- <app-docs-callout href="forms/form-control" name="Form Control"></app-docs-callout> -->
-    <img class="img-FPT" src="https://firebasestorage.googleapis.com/v0/b/img-school-c0af5.appspot.com/o/th%20(2).jpg?alt=media&token=73c790bb-226d-4db3-a76c-a133d9bb5ffa&_gl=1*12kagm2*_ga*MjA3NzQ3NjQ2OS4xNjc4NTE2MDY3*_ga_CW55HF8NVT*MTY5NTk3MTkwMi4xNy4xLjE2OTU5NzQ4NjkuNDEuMC4w">
+    <app-docs-callout href="forms/form-control" name="Form Control"></app-docs-callout>
   </c-col>
   <c-col xs="12">
     <c-card class="mb-4">
       <c-card-header>
-        <strong>Nguyễn Công Nguyên</strong>
+        <strong>Angular Form Control</strong>
       </c-card-header>
       <c-card-body>
-        <form cForm>
-          <div class="mb-3">
-            <label cLabel for="exampleFormControlInput1">Email address: </label>
-            <label>nguyencong@gmail.com</label><br/>
-            <label>Phone number: 015879654</label><br/>
-            <label>Major: SE</label><br/>
-            <label>Team: blue</label>
-          </div>
-
-        </form>
-        <!-- <app-docs-example href="forms/form-control">
+        <app-docs-example href="forms/form-control">
           <form cForm>
             <div class="mb-3">
               <label cLabel for="exampleFormControlInput1">Email address</label>
@@ -244,9 +233,56 @@
             <c-col xs="auto">
               <strong>{{favoriteColor}}</strong>
             </c-col>
-          </c-row>        </app-docs-example> -->
+          </c-row>        </app-docs-example>
       </c-card-body>
     </c-card>
   </c-col>
 </c-row>
+ -->
 
+ <div>
+  <!-- <button mat-raised-button color="primary" (click)="addStudent()">
+      <mat-icon>add_box</mat-icon>
+      Add</button> -->
+  <table id="customers" style="border-collapse: collapse;">
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Code</th>
+          <th>Status</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Update Time</th>
+      </tr>
+      <!-- <tr *ngFor="let project of projectsFake">
+        <td>{{ project?.id }}</td>
+        <td>{{ project?.name }}</td>
+        <td>{{ project?.description }}</td>
+        <td>{{ project?.code }}</td>
+        <td>{{ project?.status }}</td>
+        <td>{{ project?.startDate }}</td>
+        <td>{{ project?.endDate }}</td>
+        <td>{{ project?.updateTime }}</td> -->
+
+      <tr *ngFor="let project of projects">
+          <td>{{ project?.id }}</td>
+          <td>{{ project?.name }}</td>
+          <td>{{ project?.description }}</td>
+          <td>{{ project?.code }}</td>
+          <td>{{ project?.status }}</td>
+          <td>{{ project?.startDate }}</td>
+          <td>{{ project?.endDate }}</td>
+          <td>{{ project?.updateTime }}</td>
+          <!-- <td><button
+              (click)="openDialog(school.id);
+              loadData();" class="btn btn-danger m-1">clear</button>
+          </td>   -->
+          <!-- <td>
+              <a routerLink="/update-student/:id{{school.id}}">
+                  <mat-icon style="cursor: pointer;" (click)="editStudent(student.id)">create</mat-icon>
+              </a>
+
+          </td>   -->
+      </tr>
+  </table>

@@ -5,39 +5,25 @@ export const navItems: INavData[] = [
     name: 'Dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
-    badge: {
-      color: 'info',
-      text: 'NEW'
-    }
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW'
+    // }
   },
   // {
   //   title: true,
   //   name: 'Theme'
   // },
   // {
-  //   name: 'Majors',
+  //   name: 'Colors',
   //   url: '/theme/colors',
   //   iconComponent: { name: 'cil-drop' }
   // },
   // {
-  //   name: 'School',
+  //   name: 'Typography',
   //   url: '/theme/typography',
   //   linkProps: { fragment: 'someAnchor' },
-  //   iconComponent: { name: 'cil-pencil' },
-  //   children:[
-  //     {
-  //       name:'FPT University'
-  //     },
-  //     {
-  //       name:'Hutech University'
-  //     },
-  //     {
-  //       name:'Van Lang University'
-  //     },
-  //     {
-  //       name:'Hoa Sen University'
-  //     },
-  //   ]
+  //   iconComponent: { name: 'cil-pencil' }
   // },
   // {
   //   name: 'Components',
@@ -49,21 +35,21 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-puzzle' },
     children: [
       {
-        name: 'SE',
+        name: 'Table',
         url: '/base/accordion'
       },
-      {
-        name: 'SS',
-        url: '/base/breadcrumbs'
-      },
-      {
-        name: 'SA',
-        url: '/base/cards'
-      },
-      {
-        name: 'AI',
-        url: '/base/carousel'
-      },
+      // {
+      //   name: 'Breadcrumbs',
+      //   url: '/base/breadcrumbs'
+      // },
+      // {
+      //   name: 'Cards',
+      //   url: '/base/cards'
+      // },
+      // {
+      //   name: 'Carousel',
+      //   url: '/base/carousel'
+      // },
       // {
       //   name: 'Collapse',
       //   url: '/base/collapse'
@@ -111,104 +97,114 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: 'School',
+    name: 'University',
     url: '/buttons',
     iconComponent: { name: 'cil-cursor' },
     children: [
       {
-        name: 'FPT University',
+        name: 'Table',
         url: '/buttons/buttons'
       },
-      {
-        name: 'Hutech University',
-        url: '/buttons/button-groups'
-      },
-      {
-        name: 'Van Lang University',
-        url: '/buttons/dropdowns'
-      }
+      // {
+      //   name: 'Button groups',
+      //   url: '/buttons/button-groups'
+      // },
+      // {
+      //   name: 'Dropdowns',
+      //   url: '/buttons/dropdowns'
+      // }
     ]
   },
   {
-    name: 'Intern',
+    name: 'Project',
     url: '/forms',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
-        name: 'Nguyễn Công Nguyên',
+        name: 'Table',
         url: '/forms/form-control'
       },
-      {
-        name: 'Lê Cao Bằng',
-        url: '/forms/select'
-      },
-      {
-        name: 'Trần Tố Mai',
-        url: '/forms/checks-radios'
-      },
-      {
-        name: 'Nguyễn Đức Duy',
-        url: '/forms/range'
-      },
-      {
-        name: 'Cao Mỹ Duyên',
-        url: '/forms/input-group'
-      },
-      {
-        name: 'Lê Lư',
-        url: '/forms/floating-labels'
-      },
-      {
-        name: 'Nguyễn Xuân',
-        url: '/forms/layout'
-      },
-      {
-        name: 'Đinh Cao Thắng',
-        url: '/forms/validation'
-      }
-    ]
-  },
-  // {
-  //   name: 'Charts',
-  //   url: '/charts',
-  //   iconComponent: { name: 'cil-chart-pie' }
-  // },
-  {
-    name: 'Project',
-    iconComponent: { name: 'cil-star' },
-    url: '/icons',
-    children: [
-      {
-        name: 'Breathing Machine',
-        url: '/icons/coreui-icons',
-        // badge: {
-        //   color: 'success',
-        //   text: 'FREE'
-        // }
-      },
-      {
-        name: 'Blood Testing Machine',
-        url: '/icons/flags'
-      },
-      {
-        name: 'Disease Diagnosis Machine',
-        url: '/icons/brands'
-      }
+      // {
+      //   name: 'Select',
+      //   url: '/forms/select'
+      // },
+      // {
+      //   name: 'Checks & Radios',
+      //   url: '/forms/checks-radios'
+      // },
+      // {
+      //   name: 'Range',
+      //   url: '/forms/range'
+      // },
+      // {
+      //   name: 'Input Group',
+      //   url: '/forms/input-group'
+      // },
+      // {
+      //   name: 'Floating Labels',
+      //   url: '/forms/floating-labels'
+      // },
+      // {
+      //   name: 'Layout',
+      //   url: '/forms/layout'
+      // },
+      // {
+      //   name: 'Validation',
+      //   url: '/forms/validation'
+      // }
     ]
   },
   {
     name: 'Semester',
+    url: '/charts',
+    iconComponent: { name: 'cil-chart-pie' },
+    // children: [
+    //   {
+    //     name: 'Table',
+    //     url: '/charts/semester',
+    //     // badge: {
+    //       // color: 'success',
+    //       // text: 'FREE'
+    //     // }
+    //   },
+    // ]
+  },
+  // {
+  //   name: 'University',
+  //   iconComponent: { name: 'cil-star' },
+  //   url: '/icons',
+  //   children: [
+  //     {
+  //       name: 'Table',
+  //       url: '/icons/coreui-icons',
+  //       // badge: {
+  //         // color: 'success',
+  //         // text: 'FREE'
+  //       // }
+  //     },
+  //     // {
+  //     //   name: 'CoreUI Flags',
+  //     //   url: '/icons/flags'
+  //     // },
+  //     // {
+  //     //   name: 'CoreUI Brands',
+  //     //   url: '/icons/brands'
+  //     // }
+  //   ]
+  // },
+  {
+    name: 'Attendance',
     url: '/notifications',
     iconComponent: { name: 'cil-bell' },
     children: [
       {
-        name: 'Create New',
+        name: 'Table',
         url: '/notifications/alerts'
       },
-      {
-        name: 'Update',
-        url: '/notifications/badges'
-      },
+      // {
+      //   name: 'Badges',
+      //   url: '/notifications/badges'
+      // },
       // {
       //   name: 'Modal',
       //   url: '/notifications/modal'
@@ -232,19 +228,21 @@ export const navItems: INavData[] = [
   //   title: true,
   //   name: 'Extras'
   // },
-  {
-    name: 'Login',
-    url: '/login',
-    iconComponent: { name: 'cil-notes' },
+  // {
+    // name: 'Pages',
+    // url: '/login',
+    // iconComponent: { name: 'cil-star' },
     // children: [
-      // {
-      //   name: 'Login',
-      //   url: '/login'
-      // },
-      // {
-      //   name: 'Register',
-      //   url: '/register'
-      // },
+      {
+        name: 'Login',
+        url: '/login',
+        iconComponent: { name: 'cil-notes' },
+      },
+      {
+        name: 'Register',
+        url: '/register',
+        iconComponent: { name: 'cil-notes' },
+      },
       // {
       //   name: 'Error 404',
       //   url: '/404'
@@ -254,11 +252,6 @@ export const navItems: INavData[] = [
       //   url: '/500'
       // }
     // ]
-  },
-  {
-    name:'Register',
-    url:'/register',
-    iconComponent: { name: 'cil-description' }
   // },
   // {
   //   title: true,
@@ -277,5 +270,5 @@ export const navItems: INavData[] = [
   //   url: 'https://coreui.io/product/angular-dashboard-template/',
   //   iconComponent: { name: 'cil-layers' },
   //   attributes: { target: '_blank' }
-  }
+  // }
 ];

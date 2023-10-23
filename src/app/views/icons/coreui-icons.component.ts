@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { IconSetService } from '@coreui/icons-angular';
 import { brandSet, flagSet, freeSet } from '@coreui/icons';
-import { Project } from 'src/app/model/Project';
+import { School } from 'src/app/model/School';
 import { ServerHttpService } from 'src/app/server-http.service';
 import { CommonService } from 'src/app/common.service';
 import {  Router } from '@angular/router';
@@ -14,8 +14,9 @@ import {  Router } from '@angular/router';
   providers: [IconSetService],
 })
 export class CoreUIIconsComponent implements OnInit {
-  public title = 'CoreUI Icons';
-  public icons!: [string, string[]][];
+  // public title = 'CoreUI Icons';
+  // public icons!: [string, string[]][];
+  public schools: School[] = [];
 
   constructor(
     private route: ActivatedRoute, public iconSet: IconSetService,
@@ -23,10 +24,9 @@ export class CoreUIIconsComponent implements OnInit {
     private common: CommonService,
     public router: Router
   ) {
-    iconSet.icons = { ...freeSet, ...brandSet, ...flagSet };
+    // iconSet.icons = { ...freeSet, ...brandSet, ...flagSet };
   }
 
-  public projects: Project[] = [];
 
   ngOnInit() {
     this.loadData();
@@ -46,12 +46,12 @@ export class CoreUIIconsComponent implements OnInit {
   }
 
   public loadData() {
-    this.serverHttp.getDataProject().then((response) => {
+    this.serverHttp.getDataSchool().then((response) => {
       // Chỉ trích xuất dữ liệu từ phản hồi Axios
     const responseData = response.data;
       // Gán dữ liệu từ response vào mảng projects
-      this.projects = responseData as Project[];
-      console.log(this.projects); // Hiển thị dữ liệu đã nhận được trong console log
+      this.schools = responseData as School[];
+      console.log(this.schools); // Hiển thị dữ liệu đã nhận được trong console log
     }).catch((error) => {
       console.log(error);
     });

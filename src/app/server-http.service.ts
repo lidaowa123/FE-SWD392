@@ -30,7 +30,7 @@ export class ServerHttpService {
       method: 'get',
       url: this.basicAPI + 'majors',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5NzM3ODU0NCwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.H-vuL9uJKRkN7Ijh2N7SYHJ5B4FXtnZPxC8avw2CAEo'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MjIzOCwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.Iiqkz5ezAnmzmROlINDXFr5-UtDMNgbwx1Njh3d5gR4'
       }
     };
     return await axios(config)
@@ -45,7 +45,7 @@ export class ServerHttpService {
       method: 'get',
       url: this.basicAPI + 'projects',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5NzYxNzQ4MCwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.bz_aknCS1hUHV2a1P0YQHFa9wtX9lX5EDW7Lj2Tgctw'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MjIzOCwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.Iiqkz5ezAnmzmROlINDXFr5-UtDMNgbwx1Njh3d5gR4'
       }
     };
     return await axios(config)
@@ -64,31 +64,50 @@ export class ServerHttpService {
   // getDataProject(): Observable<Project[]>{
   //   return this.httpClient.get<Project[]>(this.basicAPI + 'api/projects' + this.httpOptions);
   // }
-  //load data intern
-  async getDataIntern(){
+  //load data semester
+  async getDataSemester(){
     var config = {
       method: 'get',
-      url: this.basicAPI + 'interns',
+      url: this.basicAPI + 'semesters',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5NzE2NzczMSwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.GGiKt-DCanfb4TKnwB50DfiLvZ-U0j24HrofJd-B0Wc'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MDY0NiwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.ZCCEZKS3hrUwpbA1hCx1Gk5augbsA-fpcsnsEpa1kx8'
       }
     };
     return await axios(config)
-    // return this.httpClient.get<Intern[]>('https://localhost:7254/api/Intern');
   }
+
   //load data school
   async getDataSchool(){
     var config = {
       method: 'get',
       url: this.basicAPI + 'universities',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5NzE2NzczMSwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.GGiKt-DCanfb4TKnwB50DfiLvZ-U0j24HrofJd-B0Wc'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MDY0NiwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.ZCCEZKS3hrUwpbA1hCx1Gk5augbsA-fpcsnsEpa1kx8'
       }
     };
     return await axios(config)
-  // getDataSchool(){
-  //   return this.httpClient.get<School[]>(this.basicAPI + 'api/universities/count' + this.httpOptions);
-  // }
+  }
+  async getDataAttendance(){
+    var config = {
+      method: 'get',
+      url: this.basicAPI + 'attendances',
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MDY0NiwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.ZCCEZKS3hrUwpbA1hCx1Gk5augbsA-fpcsnsEpa1kx8'
+      }
+    };
+    return await axios(config)
+  }
+
+  async deleteMajor(majorId: String){
+    var config = {
+      method: 'delete',
+      url: this.basicAPI + '' + majorId,
+      headers: {
+         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJodW5ncGhhbXBodTE1OUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTY5Nzg3MDY0NiwiaXNzIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly9zd2Rwcm9qZWN0YXBpLmF6dXJld2Vic2l0ZXMubmV0In0.ZCCEZKS3hrUwpbA1hCx1Gk5augbsA-fpcsnsEpa1kx8'
+      }
+    };
+    return await axios(config)
+  }
 
   //delete major
   // async deleteMajors(id: string){
@@ -104,4 +123,4 @@ export class ServerHttpService {
   // }
 
   }
-}
+

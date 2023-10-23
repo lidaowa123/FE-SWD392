@@ -6,12 +6,12 @@
       <img class="img-FPT" src="https://firebasestorage.googleapis.com/v0/b/img-school-c0af5.appspot.com/o/th%20(3).jpg?alt=media&token=c0b3e882-02f8-4d94-a67c-06cd06066f73&_gl=1*1dc8mk7*_ga*MjA3NzQ3NjQ2OS4xNjc4NTE2MDY3*_ga_CW55HF8NVT*MTY5NTk3ODkxMC4xOS4xLjE2OTU5Nzg5MjEuNDkuMC4w"/>
     </c-card-header>
     <c-card-body>
-      <!-- <c-row class="text-center">
+       <c-row class="text-center">
         <c-col *ngFor="let icon of icons" class="mb-5" md="3" sm="4" xl="2" xs="6">
           <svg cIcon [name]="icon[0]" [title]="icon[0]" size="3xl"></svg>
           <div>{{ toKebabCase(icon[0]) }}</div>
         </c-col>
-      </c-row> 
+      </c-row>
     </c-card-body>
   </c-card>
 </div>
@@ -29,7 +29,7 @@
           <svg cIcon [name]="icon[0]" [title]="icon[0]" size="3xl"></svg>
           <div>{{ toKebabCase(icon[0]) }}</div>
         </c-col>
-      </c-row> 
+      </c-row>
     </c-card-body>
   </c-card>
 </div>
@@ -47,7 +47,7 @@
           <svg cIcon [name]="icon[0]" [title]="icon[0]" size="3xl"></svg>
           <div>{{ toKebabCase(icon[0]) }}</div>
         </c-col>
-      </c-row> 
+      </c-row>
     </c-card-body>
   </c-card>
 </div> -->
@@ -57,14 +57,11 @@
       Add</button> -->
   <table id="customers" style="border-collapse: collapse;">
       <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Code</th>
-          <th>Status</th>
-          <th>Start Date</th>
-          <th>End Date</th>
-          <th>Update Time</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Update Time</th>
+        <th>Status</th>
       </tr>
       <!-- <tr *ngFor="let project of projectsFake">
         <td>{{ project?.id }}</td>
@@ -76,15 +73,12 @@
         <td>{{ project?.endDate }}</td>
         <td>{{ project?.updateTime }}</td> -->
 
-      <tr *ngFor="let project of projects">
-          <td>{{ project?.id }}</td>
-          <td>{{ project?.name }}</td>
-          <td>{{ project?.description }}</td>
-          <td>{{ project?.code }}</td>
-          <td>{{ project?.status }}</td>
-          <td>{{ project?.startDate }}</td>
-          <td>{{ project?.endDate }}</td>
-          <td>{{ project?.updateTime }}</td>
+        <tr *ngFor="let school of schools">
+          <td>{{ school?.id }}</td>
+          <td>{{ school?.name }}</td>
+          <td>{{ school?.code }}</td>
+          <td>{{ school?.updateTime }}</td>
+          <td>{{ school?.status }}</td>
           <!-- <td><button
               (click)="openDialog(school.id);
               loadData();" class="btn btn-danger m-1">clear</button>

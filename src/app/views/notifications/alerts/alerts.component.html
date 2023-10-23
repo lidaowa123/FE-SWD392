@@ -1,26 +1,14 @@
-<c-row>
+<!-- <c-row>
   <c-col xs="12">
-    <!-- <app-docs-callout href="components/alert" name="Alert"></app-docs-callout> -->
+    <app-docs-callout href="components/alert" name="Alert"></app-docs-callout>
   </c-col>
   <c-col xs="12">
     <c-card class="mb-4">
       <c-card-header>
-        <strong>Create New</strong>
+        <strong>Angular Alert</strong>
       </c-card-header>
       <c-card-body>
-        <form>
-          <label>Name of semester:
-            <input type="text" name=""/><br/>
-          </label><br/>
-          <label>Name of team:
-            <input type="text" name=""/><br/>
-          </label><br/>
-          <label>Date time:
-            <input type="text" name=""/><br/>
-          </label><br/>
-          <button type="button">Create New</button>
-        </form>
-        <!-- <p class="text-medium-emphasis small">
+        <p class="text-medium-emphasis small">
           Angular Alert is prepared for any length of text, as well as an optional close button.
           For a styling, use one of the <strong>required</strong> contextual <code>color</code>
           props (e.g., <code>primary</code>). For inline dismissal, use the
@@ -28,8 +16,8 @@
             dismissing prop
           </a>
           .
-        </p> -->
-        <!-- <app-docs-example href="components/alert">
+        </p>
+        <app-docs-example href="components/alert">
           <c-alert color="primary">A simple primary alert—check it out!</c-alert>
           <c-alert color="secondary">A simple secondary alert—check it out!</c-alert>
           <c-alert color="success">A simple success alert—check it out!</c-alert>
@@ -216,8 +204,53 @@
           <hr>
           <button (click)="onToggleDismiss()" cButton class="'me-1'" color="primary">Toggle</button>
           <button (click)="onResetDismiss()" cButton color="secondary">Reset</button>
-        </app-docs-example> -->
+        </app-docs-example>
       </c-card-body>
     </c-card>
   </c-col>
-</c-row>
+</c-row> -->
+
+<div>
+  <!-- <button mat-raised-button color="primary" (click)="addStudent()">
+      <mat-icon>add_box</mat-icon>
+      Add</button> -->
+  <table id="customers" style="border-collapse: collapse;">
+      <tr>
+          <th>ID</th>
+          <th>Inter ID</th>
+          <th>Status</th>
+          <th>Description</th>
+          <th>Update Time</th>
+          <th>Check In</th>
+          <th>Check Out</th>
+      </tr>
+      <!-- <tr *ngFor="let project of projectsFake">
+        <td>{{ project?.id }}</td>
+        <td>{{ project?.name }}</td>
+        <td>{{ project?.description }}</td>
+        <td>{{ project?.code }}</td>
+        <td>{{ project?.status }}</td>
+        <td>{{ project?.startDate }}</td>
+        <td>{{ project?.endDate }}</td>
+        <td>{{ project?.updateTime }}</td> -->
+
+      <tr *ngFor="let attendance of attendances">
+          <td>{{ attendance?.id }}</td>
+          <td>{{ attendance?.inter_id }}</td>
+          <td>{{ attendance?.status }}</td>
+          <td>{{ attendance?.description }}</td>
+          <td>{{ attendance?.updateTime }}</td>
+          <td>{{ attendance?.checkIn }}</td>
+          <td>{{ attendance?.checkOut }}</td>
+          <!-- <td><button
+              (click)="openDialog(school.id);
+              loadData();" class="btn btn-danger m-1">clear</button>
+          </td>   -->
+          <!-- <td>
+              <a routerLink="/update-student/:id{{school.id}}">
+                  <mat-icon style="cursor: pointer;" (click)="editStudent(student.id)">create</mat-icon>
+              </a>
+
+          </td>   -->
+      </tr>
+  </table>

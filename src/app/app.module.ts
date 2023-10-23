@@ -8,7 +8,7 @@ import { OAuthService,AuthConfig } from 'angular-oauth2-oidc';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
-
+// import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 // Import routing module
@@ -42,11 +42,13 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
+// import { UpdateMajorComponent } from './update-major/update-major.component';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
-  DefaultLayoutComponent
+  DefaultLayoutComponent,
+  // UpdateMajorComponent
 ];
 
 @NgModule({

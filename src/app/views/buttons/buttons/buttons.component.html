@@ -1,20 +1,20 @@
-<c-row ngPreserveWhitespaces>
+<!-- <c-row ngPreserveWhitespaces>
   <c-col xs="12">
-    <!-- <app-docs-callout href="components/button" name="Button"></app-docs-callout> -->
-    <img class="img-FPT" src="https://firebasestorage.googleapis.com/v0/b/img-school-c0af5.appspot.com/o/truong-dai-hoc-fpt-738140.jpg?alt=media&token=29f7a005-234c-449f-baa7-5e634f4e4c8d&_gl=1*14ptnge*_ga*MjA3NzQ3NjQ2OS4xNjc4NTE2MDY3*_ga_CW55HF8NVT*MTY5NTk1Njc3OC4xNi4xLjE2OTU5NTc5NTYuNjAuMC4w">
+    <app-docs-callout href="components/button" name="Button"></app-docs-callout>
   </c-col>
   <c-col xs="12">
     <c-card class="mb-4" id="AngularButton">
       <c-card-header>
-        <strong>FPT University</strong>
+        <strong>Angular Button</strong>
       </c-card-header>
       <c-card-body>
-        <p>
-          FPT University Ho Chi Minh City is being built in the Hi-Tech Park District 9 Ho Chi Minh City with a capacity of 10,000 students,
-           where high-tech companies such as Intel (USA), Nidec (Japan), ... and other centers are concentrated.
-           Modern scientific and technical research center.
+        <p class="text-medium-emphasis small">
+          CoreUI includes a bunch of predefined buttons components, each serving its own
+          semantic purpose. Buttons show what action will happen when the user clicks or touches
+          it. CoreUI buttons are used to initialize operations, both in the background or
+          foreground of an experience.
         </p>
-        <!-- <app-docs-example fragment="AngularButton" href="components/button">
+        <app-docs-example fragment="AngularButton" href="components/button">
           <c-row *ngFor="let state of states; index as i" class="align-items-center mb-3">
             <c-col class="mb-3 mb-xl-0" xl="2" xs="12">
               {{state.charAt(0).toUpperCase() + state.slice(1)}}
@@ -31,11 +31,11 @@
               </button>
             </c-col>
           </c-row>
-        </app-docs-example> -->
+        </app-docs-example>
       </c-card-body>
     </c-card>
   </c-col>
-  <!-- <c-col xs="12">
+  <c-col xs="12">
     <c-card class="mb-4" id="AngularButtonWithIcons">
       <c-card-header>
         <strong>Angular Button</strong> <small>with icons</small>
@@ -336,5 +336,46 @@
         </app-docs-example>
       </c-card-body>
     </c-card>
-  </c-col> -->
-</c-row>
+  </c-col>
+</c-row> -->
+
+<div>
+  <!-- <button mat-raised-button color="primary" (click)="addStudent()">
+      <mat-icon>add_box</mat-icon>
+      Add</button> -->
+  <table id="customers" style="border-collapse: collapse;">
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Update Time</th>
+          <th>Status</th>
+      </tr>
+      <!-- <tr *ngFor="let project of projectsFake">
+        <td>{{ project?.id }}</td>
+        <td>{{ project?.name }}</td>
+        <td>{{ project?.description }}</td>
+        <td>{{ project?.code }}</td>
+        <td>{{ project?.status }}</td>
+        <td>{{ project?.startDate }}</td>
+        <td>{{ project?.endDate }}</td>
+        <td>{{ project?.updateTime }}</td> -->
+
+      <tr *ngFor="let school of schools">
+          <td>{{ school?.id }}</td>
+          <td>{{ school?.name }}</td>
+          <td>{{ school?.code }}</td>
+          <td>{{ school?.updateTime }}</td>
+          <td>{{ school?.status }}</td>
+          <!-- <td><button
+              (click)="openDialog(school.id);
+              loadData();" class="btn btn-danger m-1">clear</button>
+          </td>   -->
+          <!-- <td>
+              <a routerLink="/update-student/:id{{school.id}}">
+                  <mat-icon style="cursor: pointer;" (click)="editStudent(student.id)">create</mat-icon>
+              </a>
+
+          </td>   -->
+      </tr>
+  </table>
