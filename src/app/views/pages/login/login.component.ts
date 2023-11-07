@@ -1,6 +1,6 @@
 import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { GoogleApiService, UserInfo } from '../../../google-api.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';import { IconSetService } from '@coreui/icons-angular';
@@ -17,7 +17,7 @@ import { Title } from '@angular/platform-browser';
   // schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
   title = 'angular-google-oauth-example';
 
@@ -29,9 +29,17 @@ export class LoginComponent {
       this.userInfo = info
     })
   }
+  ngOnInit(): void {
+    console.log(this.userInfo);
+  }
+
 
   isLoggedIn(): boolean {
     return this.googleApi.isLoggedIn()
+  }
+
+  logIn() {
+    this.googleApi.signIn();
   }
 
   logout() {

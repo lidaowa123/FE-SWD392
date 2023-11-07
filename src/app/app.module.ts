@@ -84,10 +84,10 @@ const APP_CONTAINERS = [
     OAuthModule.forRoot()
   ],
   providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    },
+    // {
+    //   provide: LocationStrategy,
+    //   useClass: HashLocationStrategy
+    // },
     IconSetService,
     Title,
     OAuthService,

@@ -68,7 +68,7 @@
           <div class="card shadow">
               <div class="card-body">
                   <form>
-                      <div class="mb-3">
+                      <!-- <div class="mb-3">
                           <h4 class="text-dark text-muted">Login</h4>
                       </div>
                       <div class="mb-3">
@@ -84,15 +84,15 @@
                           <div class="col-md-6">
                               <a routerLink="/register" style="text-decoration: none;">Need Account ? <span class="text-danger">Register</span></a>
                           </div>
-                          <!-- <c-col class="text-right" xs="6"> -->
+                          <c-col class="text-right" xs="6">
                             <button cButton class="px-0" color="link">
                               Forgot password?
                             </button>
-                          <!-- </c-col> -->
-                          <!-- <div class="col-md-6">
+                          </c-col>
+                          <div class="col-md-6">
                               <a href="/forgot-password" class="text-dark" style="text-decoration: none;"> Forgot Password ? </a>
-                          </div> -->
-                      </div>
+                          </div>
+                      </div> -->
                       <!-- <div class="row mt-2">
                           <a style="text-decoration: none;cursor: pointer;">
                               <div class="card shadow text-center">
@@ -104,11 +104,11 @@
                           </a>
                       </div> -->
                       <div class="col s12 m6 offset-m3 center-align">
-                        <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/" style="text-transform:none">
-                            <div class="left">
-                                <!-- <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" /> -->
-                                      <div *ngIf="isLoggedIn()">
+                        <div class="oauth-container btn darken-4 white black-text" (click)="logIn()" style="text-transform:none">
+                            <!-- <div class="left">
+                                <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in" 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                    <div *ngIf="isLoggedIn()">
                                       <div class="container">Hi and welcome!</div>
                                       <div class="container">Name: {{ userInfo?.info?.name }}</div>
                                       <div class="container"><img src="{{ userInfo?.info?.picture }}"></div>
@@ -123,9 +123,12 @@
                                       </div>
                                     </div> 
                                     <h1>login</h1>
-                            </div>
+                            </div> -->
                             Login with Google
-                        </a>
+                        </div>
+                        <div class="oauth-container btn darken-4 white black-text" (click)="logout()" style="text-transform:none;margin-top: 10px;">
+                            Logout with Google
+                        </div>
                     </div>
                     
                     <!-- Compiled and minified CSS -->
